@@ -410,9 +410,11 @@ class ListsPageState extends State<ListsPage> with AfterLayoutMixin<ListsPage> {
                             )
                           ],
                   ),
-                  body: SingleChildScrollView(
-                      child: Container(
-                          height: screenHeight,
+                  body: ListView(
+                    padding: const EdgeInsets.all(8),
+                    children: <Widget>[
+                      Container(
+                          color: Colors.amber[600],
                           child: Column(
                             children: [
                               Card(
@@ -448,16 +450,19 @@ class ListsPageState extends State<ListsPage> with AfterLayoutMixin<ListsPage> {
                                   ],
                                 ),
                               ),
-                              Divider(color: Colors.black),
-                              currentIndex == -1
-                                  ? Center(child: Text('Vacio'))
-                                  : viewMenu(
-                                      context,
-                                      listsnapshot.data,
-                                      setState,
-                                      listsnapshot.data[currentIndex]),
                             ],
-                          ))));
+                          )),
+                      Divider(color: Colors.black),
+                      Container(
+                        height: MediaQuery.of(context).size.width * 1.15,
+                        color: Colors.amber[100],
+                        child: currentIndex == -1
+                            ? Center(child: Text('Vacio'))
+                            : viewMenu(context, listsnapshot.data, setState,
+                                listsnapshot.data[currentIndex]),
+                      ),
+                    ],
+                  ));
             } else {
               return Center(child: CircularProgressIndicator());
             }
