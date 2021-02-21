@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:Actividades/stopwatch.dart';
 
 class TaskDetailsPage extends StatefulWidget {
   final Item task;
@@ -434,6 +435,8 @@ class _TaskDetailsPageState extends State<TaskDetailsPage>
                                         child: const Text('Guardar',
                                             style: TextStyle(fontSize: 20)))
                                   ]),
+                              SizedBox(height: 2.0),
+                              new StopWatch(),
                               SizedBox(height: 16.0),
                             ]));
                   } else {
