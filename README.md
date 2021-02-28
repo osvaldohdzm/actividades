@@ -44,6 +44,18 @@ c Clear the screen
 q Quit (terminate the application on the device).
 
 
+## Git Basic usage:
+
+From your forked project folder:
+
+    git add .
+    git commit -m "Description of changes."
+    git push origin
+
+
+From the base project:
+
+
 
 cfear un proyecto flutter y elegit flutter sdk
 
