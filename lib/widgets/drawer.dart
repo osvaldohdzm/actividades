@@ -41,7 +41,7 @@ class NavigationDrawer extends StatelessWidget {
           ),
           createDrawerBodyItem(
             icon: Icons.calendar_today,
-            text: 'Calendario',
+            text: 'Agenda',
             onTap: () => Navigator.pushReplacementNamed(context, 'calendar'),
           ),
           createDrawerBodyItem(
