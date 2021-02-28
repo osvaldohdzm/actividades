@@ -53,9 +53,9 @@ From your forked project folder:
     git push origin
 
 
-From the base project:
+From the base project, example:
 
-
+    git pull https://github.com/Gabriela62/actividades.git
 
 cfear un proyecto flutter y elegit flutter sdk
 
